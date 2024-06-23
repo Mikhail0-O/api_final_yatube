@@ -1,0 +1,58 @@
+POST http://127.0.0.1:8000/api/v1/users/
+Content-Type: application/json
+
+{
+    "username": "Lena",
+    "password": "qwerty123qwerty"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "Mike",
+    "password": "qwerty123qwerty"
+}
+
+###
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MzMyMzk0LCJqdGkiOiI2Y2U5YmUxNzk1MWI0YTcxYWFmYWMxMmVhOTc3YTNjOSIsInVzZXJfaWQiOjF9.aCMv8ECmDDKCbD6es4nkIMQmcKsb9tzogQklBW7n5VA
+###
+GET http://127.0.0.1:8000/api/v1/follow/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MzMyMzk0LCJqdGkiOiI2Y2U5YmUxNzk1MWI0YTcxYWFmYWMxMmVhOTc3YTNjOSIsInVzZXJfaWQiOjF9.aCMv8ECmDDKCbD6es4nkIMQmcKsb9tzogQklBW7n5VA
+
+###
+POST http://127.0.0.1:8000/api/v1/follow/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MzA0ODAwLCJqdGkiOiI5YjVmMTIxZGY2NjU0YTcwOTRlZjAyZGI2MmFiZWRiZSIsInVzZXJfaWQiOjF9.BLEnn5oud9An9E_DtWquUo_13zx7LLRbSMr72lWT-tI
+Content-Type: application/json
+
+{
+    "following": "Lena"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/v1/follow/Den/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MzA0ODAwLCJqdGkiOiI5YjVmMTIxZGY2NjU0YTcwOTRlZjAyZGI2MmFiZWRiZSIsInVzZXJfaWQiOjF9.BLEnn5oud9An9E_DtWquUo_13zx7LLRbSMr72lWT-tI
+Content-Type: application/json
+
+# {
+#     "following": "Den"
+# }
+
+###
+GET http://127.0.0.1:8000/api/v1/posts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MzA0ODAwLCJqdGkiOiI5YjVmMTIxZGY2NjU0YTcwOTRlZjAyZGI2MmFiZWRiZSIsInVzZXJfaWQiOjF9.BLEnn5oud9An9E_DtWquUo_13zx7LLRbSMr72lWT-tI
+
+###
+GET http://127.0.0.1:8000/api/v1/posts/?limit=5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MzA0ODAwLCJqdGkiOiI5YjVmMTIxZGY2NjU0YTcwOTRlZjAyZGI2MmFiZWRiZSIsInVzZXJfaWQiOjF9.BLEnn5oud9An9E_DtWquUo_13zx7LLRbSMr72lWT-tI
+
+
+###
+POST http://127.0.0.1:8000/api/v1/posts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MzA0ODAwLCJqdGkiOiI5YjVmMTIxZGY2NjU0YTcwOTRlZjAyZGI2MmFiZWRiZSIsInVzZXJfaWQiOjF9.BLEnn5oud9An9E_DtWquUo_13zx7LLRbSMr72lWT-tI
+Content-Type: application/json
+
+{
+    "text": "Первый пост"
+}
