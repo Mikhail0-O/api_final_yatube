@@ -6,8 +6,7 @@ from .views import (FollowViewSet, PostViewSet, GroupReadOnlyViewSet,
 
 
 v1_router = routers.DefaultRouter()
-v1_router.register(r'follow', FollowViewSet, basename='follows')
-# v1_router.register(r'follow/(\D+)', FollowViewSet, basename='follows')
+v1_router.register('follow', FollowViewSet, basename='follows')
 v1_router.register('posts', PostViewSet, basename='posts')
 v1_router.register('groups', GroupReadOnlyViewSet, basename='groups')
 v1_router.register(r'posts/(?P<post_id>\d+)/comments',
