@@ -8,10 +8,12 @@ User = get_user_model()
 
 
 class GetPostMixin:
+
     def get_post(self):
         return get_object_or_404(Post, id=self.kwargs.get('post_id'))
 
 
 class GetUserMixin:
+
     def get_user(self):
-        return get_object_or_404(User, id=self.request.user.id)
+        return self.request.user

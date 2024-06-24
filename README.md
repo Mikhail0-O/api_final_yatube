@@ -9,8 +9,9 @@ API для блога. Можно писать свои посты. Коммен
 Authorization: Bearer ВАШ_API_КЛЮЧ
 ```
 
-### Эндпоинты
-Получение всех постов:
+### Документация к API http://127.0.0.1:8000/redoc/
+
+### Пример запроса к энпоинту
 URL: http://127.0.0.1:8000/api/v1/posts/
 Метод: GET
 Параметры:
@@ -35,7 +36,7 @@ GET /widgets?page=1&limit=10
 ```
 git clone https://github.com/Mikhail0-O/api_final_yatube.git
 
-cd kittygram
+cd yatube_api
 ```
 Cоздать и активировать виртуальное окружение:
 ```
